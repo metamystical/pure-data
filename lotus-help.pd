@@ -1,0 +1,65 @@
+#N canvas 5 21 674 427 10;
+#X obj 14 192 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 299 12 Lotus - database for messages.;
+#X obj 87 209 lotus filename;
+#X text 299 144 bang: print all the lines of the database file.;
+#X obj 187 184 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 201 283;
+#X text 299 166 delete: when toggled causes the presentation of a key
+to the active input to delete a line in the database file.;
+#X msg 16 35 3 hello world!;
+#X msg 48 74 3;
+#X msg 118 150 key1;
+#X symbolatom 14 292 25 0 0 0 - - -;
+#X text 11 312 Use for special characters;
+#X floatatom 193 237 5 0 0 0 - - -;
+#X msg 13 331 key2;
+#X obj 77 258 print raw;
+#X obj 201 317 print;
+#X text 192 220 Input;
+#X text 299 204 To retrieve a message-string \, present a message composed
+of a key (symbol or number) to the active (leftmost) input. The corresponding
+message-string will appear at the output.;
+#X text 12 16 Click to store;
+#X text 45 57 Click to retrieve;
+#X text 103 90 Click to store;
+#X text 115 133 Click to retrieve;
+#X text 110 34 <-Key is a number;
+#X text 151 150 <-Key is a symbol;
+#X text 208 195 toggle;
+#X msg 106 107 key1 set 1.23 abc;
+#X text 202 265 Target;
+#X text 299 255 To store a message-string \, present a store messge
+composed of a key (symbol or number) followed by a message-string to
+the active input.;
+#X text 299 309 If a store message contains any special characters
+such as comma \, semicolon or dollar-sign \, use a symbol box so that
+the special characters will be escaped with a backslash. For example
+\, type 'key2 set get \$1' into the symbol box then hit the 'enter'
+key. Click 'Print db' to confirm that the message has been stored.
+Click the 'key2' message box \, then click on the 'Target' message
+box. The 'Input' number should be substituted for \$1 and printed.
+;
+#X text 10 173 Print db;
+#X text 208 181 Delete;
+#X text 298 35 Messages are stored in the database file named 'filename'
+(default 'db') and are retrieved using a key composed of a symbol or
+number. Each line in the file is structured as 'key message-string'
+where the message-string can have multiple elements separated by whitespace.
+The database file can be created and edited outside of Pd but can also
+be updated from within Pd. Each time the file is updated \, it is re-sorted
+according to the keys.;
+#X connect 0 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 0 14 0;
+#X connect 4 0 2 1;
+#X connect 5 0 15 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 0;
+#X connect 12 0 5 0;
+#X connect 13 0 2 0;
+#X connect 25 0 2 0;

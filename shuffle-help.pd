@@ -1,0 +1,31 @@
+#N canvas 5 21 698 212 10;
+#X floatatom 76 119 4 0 0 0 - - -;
+#X obj 42 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 73 30 lower;
+#X text 122 30 upper;
+#X text 171 30 fraction;
+#X text 286 22 Shuffle - outputs all of the integers in a specified
+range;
+#X text 286 34 in random order without repeating any \, then reshuffles
+;
+#X text 286 50 bang: output next integer in the series;
+#X text 286 66 lower: lower bound of range (active \, causes reset)
+;
+#X text 286 82 upper: upper bound of range (passive);
+#X text 286 98 fraction: if nonzero \, ensures that the last fraction
+of;
+#X text 286 110 the series is not repeated at the beginning of the
+next;
+#X obj 76 84 shuffle -1 6 0.25;
+#X text 286 122 (0 <= fraction <= 0.5) (passive);
+#X text 286 138 upper and fraction inputs take effect when lower is
+input;
+#X msg 76 52 0;
+#X msg 125 52 9;
+#X msg 175 52 0.3;
+#X connect 1 0 12 0;
+#X connect 12 0 0 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 1;
+#X connect 17 0 12 2;

@@ -1,12 +1,12 @@
 # Pure-Data externals
 
-* [pd-demo](https://github.com/metamystical/pure-data/tree/main#pd-demo)
-* [pd-purdie](https://github.com/metamystical/pure-data/tree/main#pd-purdie)
-* [pd-memorex](https://github.com/metamystical/pure-data/tree/main#pd-memorex)
-* [pd-seq](https://github.com/metamystical/pure-data/tree/main#pd-seq)
-* [pd-shuffle](https://github.com/metamystical/pure-data/tree/main#pd-shuffle)
-* [pd-lotus](https://github.com/metamystical/pure-data/tree/main#pd-lotus)
-* [pd-comma](https://github.com/metamystical/pure-data/tree/main#pd-comma)
+* [pd-demo](#pd-demo)
+* [pd-purdie](#pd-purdie)
+* [pd-memorex](#pd-memorex)
+* [pd-seq](#pd-seq)
+* [pd-shuffle](#pd-shuffle)
+* [pd-lotus](#pd-lotus)
+* [pd-comma](#pd-comma)
 
 ## pd-demo
 Demonstration of Pure Data (Pd) objects connected together for experimental musical composition using random notes.

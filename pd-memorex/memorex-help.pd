@@ -1,0 +1,42 @@
+#N canvas 352 198 630 311 10;
+#X msg 45 130 3;
+#X msg 91 66 1 \, 2 \, 3 \, 4;
+#X obj 54 202 print;
+#X obj 160 113 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 157 97 replay;
+#X text 104 218 chord;
+#X text 240 75 replay: if off (0) \, pass input through to the output
+while recording. If on (1) \, replay the buffer in a loop while ignoring
+the input except as a trigger.;
+#X text 52 219 note;
+#X text 113 28 <-chord;
+#X text 165 62 <-series;
+#X text 165 72 of notes;
+#X msg 60 28 5 6 7 8;
+#X text 43 113 note;
+#X text 240 117 size: (integer) the size of the memory buffer. If positive
+\, the buffer is FIFO (first in \, first out). If negative \, the buffer
+is LIFO (last in \, first out). Changing it erases the buffer history.
+Its initial value is set as the first object argumment [memorex size
+num_notes]. The default value is zero.;
+#X text 240 192 The inputs 'note' \, 'replay' \, 'size' and 'num_notes'
+can be each sent as messages to the left input \, each with one argument.
+;
+#X text 240 236 There are two outputs 'note' (a float) and 'chord'
+(a message). 'note' is just the first element of the 'chord' list.
+If there are fewer than 'num_notes' notes in the chord \, the rest
+are set to zero.;
+#X obj 91 163 memorex 10 4;
+#X text 240 10 Memorex - records the leftmost input history in a memory
+buffer of size 'size'. Each input can be a single integer 'note' or
+a list of integers 'chord' numbering up num_notes \, the second argument
+of the object [memorex size num_notes]. The default value of num_notes
+is one.;
+#X msg 105 199;
+#X connect 0 0 16 0;
+#X connect 1 0 16 0;
+#X connect 3 0 16 1;
+#X connect 11 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 1 18 0;

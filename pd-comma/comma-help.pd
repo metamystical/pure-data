@@ -1,0 +1,47 @@
+#N canvas 515 173 596 333 10;
+#X obj 75 188 comma;
+#X obj 75 279 print;
+#X msg 77 118 1 \, 2 \, 3 \, 4;
+#X obj 29 154 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 20 30 a b;
+#X text 202 11 Comma - adds or removes commas from a message.;
+#X text 202 34 Input messages are processed differently depending on
+the number of elements in them.;
+#X text 202 63 Reminder: messages that begin with a number are automatically
+given the selector 'list' unless there is only one number in the message
+\, in which case that number is given the selector 'float'. In all
+other cases \, the selector is set to the first element in the message
+box.;
+#X text 202 128 Reminder: if the elements of a message are separated
+by commas \, they are treated as separate messages and are output one
+at a time \, rapid-fire.;
+#X text 20 135 clear;
+#X msg 75 232;
+#X text 202 168 Incoming messages with one element besides the selector
+are accumulated in internal memory. Incoming messages with more than
+one element clear the internal memory before they are stored internally
+separated by commas. The latter must have the 'list' selector. Whenever
+the internal memeory is modified \, it is output.;
+#X text 74 102 comma->no-comma;
+#X text 89 140 no-comma->comma;
+#X msg 52 73 a b c;
+#X text 94 61 selector is not;
+#X text 94 85 message;
+#X text 93 74 'list' so ignore;
+#X text 49 16 selector is 'a' so;
+#X text 49 29 single 'b' element;
+#X text 50 41 is accumulated;
+#X text 202 243 clear bang: clears the internal memory and outputs
+an empty message. This is provided for the comma->no-comma conversion
+because of the accumulation feature. The no-comma->comma conversion
+does not require manual clearing because there is no acccumulation
+\, but it still can be used to clear.;
+#X msg 92 157 5 4 3 2;
+#X connect 0 0 10 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 10 0 1 0;
+#X connect 14 0 0 0;
+#X connect 22 0 0 0;

@@ -1,0 +1,34 @@
+#N canvas 5 21 552 294 10;
+#X obj 25 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 37 145 seq 1 5;
+#X obj 66 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 113 68 -2;
+#X msg 113 114 -5;
+#X obj 37 189 print;
+#X text 64 70 fast;
+#X text 110 49 base;
+#X text 111 96 size;
+#X msg 50 34 reset;
+#X text 171 18 Seq - ouput a consecutive sequence of integers.;
+#X text 171 39 The arguments (1 and 5 in the example) are the initial
+values of 'base' and 'size'. They default to zero \, which results
+in no ouput. 'base' can be changed by inputing an integer to the middle
+input. 'size' can be changed on the right input. A reset nessage to
+the left input restores the initial values of 'base' and 'size'.;
+#X text 171 122 A bang to the left input causes a sequence of integers
+of size 'size' to be output \, starting with 'base'. If
+'size' is negative \, the sequence is decreasing.;
+#X text 171 170 The 'fast' toggle causes the sequence to be output
+rapid-fire instead of one bang at a time.;
+#X text 171 206 Changing any of the inputs (other than 'bang') causes
+the sequence to restart from 'base'.;
+#X text 170 239 'base' \, 'size' and 'fast' can each be sent as messages
+to the left input each with a single argument.;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 2;
+#X connect 9 0 1 0;

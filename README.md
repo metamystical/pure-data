@@ -30,7 +30,7 @@ If [memorex ] is attached to the output of [purdie ] before sending the notes to
 ## pd-purdie
 Related to [pd-shuffle](#pd-shuffle) for Pure Data.
 
-![purdie-help](https://raw.githubusercontent.com/metamystical/pure-data/main/pd-comma/comma-help.jpg)
+![purdie-help](https://raw.githubusercontent.com/metamystical/pure-data/main/pd-purdie/purdie-help.jpg)
 
 ## pd-memorex
 [memorex ] object for Pure Data -- play back recent integer inputs.

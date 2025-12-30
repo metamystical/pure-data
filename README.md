@@ -81,7 +81,7 @@ A utility object that outputs a series of integers in random order without repea
 
 A utility object that outputs a series of integers taken from an editable internal buffer, in random order.
 
-![jabea3-help](https://raw.githubusercontent.com/metamystical/pure-data/main/pd-jabea/jabea3-help.jpg)
+![jabea3-help](https://raw.githubusercontent.com/metamystical/pure-data/main/pd-jabea3/jabea3-help.jpg)
 
 ## Installation
 

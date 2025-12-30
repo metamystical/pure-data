@@ -10,6 +10,7 @@ The following externals include C source, help file, Linux executable and Window
 * [pd-comma](#pd-comma)
 * [pd-seld](#pd-seld)
 * [pd-jabea](#pd-jabea)
+* [pd-jabea3](#pd-jabea3)
 * [Installation](#Installation)
 
 ## pd-demo
@@ -74,6 +75,13 @@ An updateable version of [select ] that outputs a bang if the input matches an e
 A utility object that outputs a series of integers in random order without repeating any, then reshuffles.
 
 ![jabea-help](https://raw.githubusercontent.com/metamystical/pure-data/main/pd-jabea/jabea-help.jpg)
+
+## pd-jabea3
+[jabea3 ] object for [Pure Data](https://github.com/pure-data/pure-data) - a free real-time computer music system. 
+
+A utility object that outputs a series of integers taken from an editable internal buffer, in random order.
+
+![jabea3-help](https://raw.githubusercontent.com/metamystical/pure-data/main/pd-jabea/jabea3-help.jpg)
 
 ## Installation
 
